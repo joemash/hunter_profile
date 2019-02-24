@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <section>
+        <h5>Signage</h3>
+        <div class="row">
+            {% for product in signages.all %}
+            <div class="col-lg-4 grid-margin stretch-card">
+            <div class="card border-info mb-3" style="width: 18rem;">
+                <a href="{{ product.get_absolute_url }}" class="link-p">
+                    <img class="img-thumbnail img-fluid" src="{{ product.images.first.photo.url }}" alt="">
+                </a>
+                <div class="card-body">
+                <h4 class="card-title">{{product.name}}</h4>
+                <p class="card-text">{{product.description}}</p>
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <hr>
+
+    <section>
+            <h5>Vihicle Branding</h3>
+            <div class="row">
+                {% for product in vihicles.all %}
+                <div class="col-lg-4 grid-margin stretch-card">
+                <div class="card border-info mb-3" style="width: 18rem;">
+                    <a href="{{ product.get_absolute_url }}" class="link-p">
+                        <img class="img-thumbnail img-fluid" src="{{ product.images.first.photo.url }}" alt="">
+                    </a>
+                    <div class="card-body">
+                    <h4 class="card-title">{{product.name}}</h4>
+                    <p class="card-text">{{product.description}}</p>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+{% endblock %}
