@@ -1,7 +1,6 @@
 """
 Base settings to build other settings files upon.
 """
-
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (hunter_profile/config/settings/base.py - 3 = hunter_profile/)
@@ -13,6 +12,12 @@ READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(ROOT_DIR.path('.env')))
+
+
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='8yll3$$$omye0+0v=tfb--el9&nqlrppgb96b*21p5isc_#s0u')
+# https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['hunterprofile.com','evoconsultants.co.ke'])
+
 
 # GENERAL
 # ------------------------------------------------------------------------------
@@ -39,7 +44,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///hunter_profile'),
+    'default': env.db('DATABASE_URL', default='postgres://postgres:chinoxl@localhost:5432/hunter_db'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
