@@ -17,5 +17,5 @@
   tags: hardening
 
 - name: Restart SSHD
-  service: name=ssh state=restarted enabled=yes
+  service: name=sshd state=restarted enabled=yes
   tags: hardening
