@@ -20,12 +20,14 @@
   become: true
   
 - name: Install PostgreSQL
-  apt: name={{ item }} update_cache={{ update_apt_cache }} state=installed
-  with_items:
-    - postgresql-{{ postgresql_version }}
-    - postgresql-contrib
-    - libpq-dev
-    - python3-psycopg2
+  apt: 
+    name: 
+      - 'postgresql-{{ postgresql_version }}' 
+      - 'postgresql-contrib'
+      - 'libpq-dev'
+      - 'python3-psycopg2' 
+    update_cache: '{{ update_apt_cache }}'
+    state: present
   tags: packages
 
 - name: Ensure the PostgreSQL service is running
@@ -42,18 +44,18 @@
   service: name=postgresql state=restarted enabled=yes
 
 - name: Install Postgres client components
-  apt: name={{ item }} update_cache={{ update_apt_cache }} state=installed
-  with_items:
-    - libpq-dev
-    - python-psycopg2
-    - python3-psycopg2
+  apt: 
+    name: 
+      - 'libpq-dev' 
+      - 'python-psycopg2'
+      - 'python3-psycopg2'
+    update_cache: '{{ update_apt_cache }}'
+    state: present
   tags: packages
 
 - name: Ensure database is created
   become: true
   become_user: postgres
-  vars:
-    ansible_ssh_pipelining: true
   postgresql_db: db={{ db_name }} state=present
 
 - name: Ensure user has access to the database
