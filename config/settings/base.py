@@ -13,6 +13,10 @@ if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(ROOT_DIR.path('.env')))
 
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='8yll3$$$omye0+0v=tfb--el9&nqlrppgb96b*21p5isc_#s0u')
+# https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['hunterprofile.com','evoconsultants.co.ke'])
+
 # GENERAL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
