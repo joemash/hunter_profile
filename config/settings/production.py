@@ -118,7 +118,7 @@ INSTALLED_APPS += ['anymail', 'raven.contrib.django.raven_compat']  # noqa F405
 EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
 # https://anymail.readthedocs.io/en/stable/installation/#anymail-settings-reference
 ANYMAIL = {
-    'MAILGUN_API_KEY': env('MAILGUN_API_KEY'),
+    'MAILGUN_API_KEY': env('MAILGUN_API_KEY', default='12258dk'),
     'MAILGUN_SENDER_DOMAIN': env('MAILGUN_DOMAIN', default='example.com')
 }
 
