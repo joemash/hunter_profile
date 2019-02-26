@@ -15,7 +15,7 @@ if READ_DOT_ENV_FILE:
 
 SECRET_KEY = env('DJANGO_SECRET_KEY', default='8yll3$$$omye0+0v=tfb--el9&nqlrppgb96b*21p5isc_#s0u')
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['hunterprofile.com','evoconsultants.co.ke'])
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['hunterprofile.com','evoconsultants.co.ke','167.99.12.162'])
 
 # GENERAL
 # ------------------------------------------------------------------------------
