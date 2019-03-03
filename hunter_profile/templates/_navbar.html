@@ -1,27 +1,50 @@
 {% load static %}
-<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html">
-          <img src="{% static 'images/new-logo-2011.jpg' %}" alt="logo" />
-        </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html">
-          <img height="150px" src="{% static 'images/logo-mini.svg' %}" alt="logo" />
-        </a>
+<header class="header_area">
+  <div class="container">
+      <div class="row">
+          <!-- Logo Area Start -->
+          <div class="col-12">
+              <div class="logo_area text-center">
+                  <a href="#" class="hunter-logo">HU<span style="color:red;">N</span>TER PROFILE</a>
+                  <h5 style="font-style: italic;"> <span style="color:red;">Capture</span> audience attention</h5>
+              </div>
+          </div>
       </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center">
-        <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-          <li class="nav-item">
-            <a href="#" class="nav-link">About
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a href="#" class="nav-link">
-              <i class="mdi mdi-elevation-rise"></i>Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="mdi mdi-bookmark-plus-outline"></i>Get a Quote</a>
-          </li>
-        </ul>
+
+      <div class="row">
+          <div class="col-12">
+              <nav class="navbar navbar-expand-lg">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hunterfood-nav" aria-controls="hunterfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
+                  <!-- Menu Area Start -->
+                  <div class="collapse navbar-collapse justify-content-center" id="hunterfood-nav">
+                      <ul class="navbar-nav" id="hunter-nav">
+                          <li class="nav-item active">
+                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="hunterDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                              <div class="dropdown-menu" aria-labelledby="hunterDropdown">
+                                  <a class="dropdown-item" href="#">Custom Branding</a>
+                                  <a class="dropdown-item" href="#">Visibility Products</a>
+                                  <a class="dropdown-item" href="#">Presentation Tools</a>
+                              </div>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Services</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                                  <a class="nav-link" href="#">Blog</a>
+                              </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Contact</a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </div>
       </div>
-    </nav>
+  </div>
+</header>

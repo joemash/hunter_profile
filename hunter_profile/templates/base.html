@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 {% load static %}
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hunter Profile</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="{% static 'vendors/iconfonts/mdi/css/materialdesignicons.min.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.addons.css' %}">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Hunter Profile</title>
+
+    <!-- Favicon -->
+   
+   <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/others/animate.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/others/magnific-popup.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/others/meanmenu.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/others/owl.carousel.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/others/font-awesome.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/others/pe-icon-7-stroke.css' %}" rel="stylesheet" />
+
+    <link href="{% static 'css/others/cubeportfolio.min.css' %}" rel="stylesheet" />
+    <!-- Core Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="{% static 'css/responsive/responsive.css' %}" rel="stylesheet">
+
 </head>
 
 <body>
-  <div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
-        {% include '_navbar.html'  %}
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_sidebar.html -->
-      {% include '_sidebar.html'  %}
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          {% block content %}
+   
+    <!-- ****** Top Header Area Start ****** -->
+       {% include '_top_header.html'  %}
+    <!-- ****** Top Header Area End ****** -->
+    <!-- ****** Header Area Start ****** -->
+       {% include '_navbar.html'  %}
+    <!-- ****** Header Area End ****** -->
 
-          {% endblock content %}
-        </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        {% include '_footer.html'  %}
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
+    <!-- ****** Welcome Post Area Start ****** -->
+       {% include '_slider.html'  %}
+    <!-- ****** Welcome Area End ****** -->
 
-  <!-- plugins:js -->
-  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
-  <script src="{% static 'vendors/js/vendor.bundle.addons.js' %}"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <!-- End plugin js for this page-->
-  <!-- inject:js -->
-  <script src="{% static 'js/off-canvas.js' %}"></script>
-  <script src="{% static 'js/misc.js' %}"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page-->
-  <script src="{% static 'js/dashboard.js' %}"></script>
-  <!-- End custom js for this page-->
+    <!-- ****** Brands Area Start ****** -->
+       {% include '_brands.html'  %}
+    <!-- ****** Brands Area End ****** -->
+
+   <!-- ****** Our Products Start ****** -->
+       {% include '_products.html'  %}
+   <!-- ****** Our Products End ****** -->
+   <!-- ****** Why us ****** -->
+       {% include '_why_us.html'  %}
+ 
+    <!-- ****** Recent Works Start ****** -->
+       {% include '_works.html'  %}
+    <!-- ****** Clients Area Start ****** -->
+       {% include '_clients.html'  %}
+    <!-- ******Clients Area End ****** -->
+  
+    <!-- ****** Footer Social Icon Area Start ****** -->
+       {% include '_social_icons.html'  %}
+    <!-- ****** Footer Social Icon Area End ****** -->
+
+    <!-- ****** Footer Menu Area Start ****** -->
+    {% include '_footer.html'  %}
+    <!-- ****** Footer Menu Area End ****** -->
+
+    <!-- Jquery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins JS -->
+    <script src="{% static 'js/others/plugins.js' %}"></script>
+    <!-- Active JS -->
+   
+    <script src="{% static 'js/others/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/others/stellar.js' %}"></script>
+	  <script src="{% static 'js/others/classie.js' %}"></script>
+	  <script src="{% static 'js/others/uisearch.js' %}"></script>
+    <script src="{% static 'js/others/jquery.cubeportfolio.min.js' %}"></script>
+    <script src="{% static 'js/active.js' %}"></script>
 </body>
-
-</html>
